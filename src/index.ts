@@ -29,7 +29,6 @@ const nftContract = new ethers.Contract(
   ContractInfo.abi,
   signer
 );
-const withdrawAmount = ethers.utils.parseUnits("0", "ether").toString();
 
 const gasLimit = "100000";
 // Create a transaction object
@@ -40,7 +39,7 @@ const safeTransactionData: MetaTransactionData = {
   data: nftContract.interface.encodeFunctionData("mintGelato", [
     "0x68B38f944d2689537f8ed8A2F006b4597eE42218",
   ]),
-  value: withdrawAmount,
+  value: "0",
   operation: OperationType.Call,
 };
 const options: MetaTransactionOptions = {
