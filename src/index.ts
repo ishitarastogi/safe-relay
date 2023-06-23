@@ -16,7 +16,7 @@ import ContractInfo from "../ABI.json";
 const RPC_URL = `https://eth-goerli.g.alchemy.com/v2/process.env.ALCHEMY_PRIVATE_KEY`;
 const provider = new ethers.providers.JsonRpcProvider(RPC_URL);
 const signer = new ethers.Wallet(
-  "00f8e58a78802854ca103e961af94b8322bacad3ae7348db6f47369ebfe23d3c",
+ process.env.PRIVATE_KEY,
   provider
 );
 
